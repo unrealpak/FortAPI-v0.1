@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>FortAPI | Player Stats</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!--KOKEILU-->
+    <script type="module" defer src="stats.js"></script>
+    <script defer src="jquery-3.6.0.js"></script>
+</head>
+
+<body>
+    <div class="menu">
+
+        <a id="link" href="index.html"> Shop </a>
+        <a href="https://github.com/davidlegartt/fortnitetracker"> <img src="img/GitHub-Mark-Light-32px.png"> </a>
+        <a id="link" href="stats.html"> Stats </a>
+    </div>
+    <header>
+        <h1>Pinja's daily fortnite tracker</h1>
+    </header>
+    <div class="stat_response">
+        <input type="text" placeholder="Your IGN" id="playerName" onfocus="if (this.placeholder=='Your IGN') this.placeholder='';">
+        <button type="button" id="getName">Get stats!</button>
+    </div>
+
+    <div class="statcard">
+        <div class="overall">
+            <h1 id="playerIgn"></h1>
+            <div class="row 1 ">
+                <div class="numbers">
+                    <p class="stat_value " id="wins"></p>
+                    <p>Wins</p>
+                </div>
+                <div class="numbers">
+                    <p class="stat_value" id="win_perc"></p>
+                    <p>Win %</p>
+                </div>
+                <div class="numbers">
+                    <p class="stat_value" id="kd"></p>
+                    <p>K/D</p>
+                </div>
+                <div class="numbers">
+                    <p class="stat_value" id="kpm"></p>
+                    <p>KPM</p>
+                </div>
+            </div>
+            <div class="row 2">
+                <div class="numbers">
+                    <p class="stat_value" id="matches"></p>
+                    <p>Matches</p>
+                </div>
+                <div class="numbers">
+                    <p class="stat_value" id="kills"></p>
+                    <p>Kills</p>
+                </div>
+                <div class="numbers">
+                    <p class="stat_value" id="deaths"></p>
+                    <p>Deaths</p>
+                </div>
+
+            </div>
+            <div class="row 3">
+                <div class="numbers">
+                    <p class="stat_value" id="bp_level"></p>
+                    <p>Current BP level</p>
+                </div>
+            </div>
+        </div>
+        <div class="modes">
+            <div class="stat solo">
+                <div class="gamemode">
+                    <h1 class="gamemode">Solo</h1>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_matches"></p>
+                    <p>Matches</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_wins"></p>
+                    <p>Wins</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_winperc"></p>
+                    <p>Win %</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_kills"></p>
+                    <p>Kills</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_deaths"></p>
+                    <p>Deaths</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_kd"></p>
+                    <p>K/D</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="solo_kpm"></p>
+                    <p>KPM</p>
+                </div>
+            </div>
+            <div class="stat duo">
+                <div class="gamemode">
+                    <h1 class="gamemode">Duo</h1>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_matches"></p>
+                    <p>Matches</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_wins"></p>
+                    <p>Wins</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_winperc"></p>
+                    <p>Win %</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_kills"></p>
+                    <p>Kills</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_deaths"></p>
+                    <p>Deaths</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_kd"></p>
+                    <p>K/D</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="duo_kpm"></p>
+                    <p>KPM</p>
+                </div>
+            </div>
+            <div class="stat squad">
+                <div class="gamemode">
+                    <h1 class="gamemode">Squad</h1>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_matches"></p>
+                    <p>Matches</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_wins"></p>
+                    <p>Wins</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_winperc"></p>
+                    <p>Win %</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_kills"></p>
+                    <p>Kills</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_deaths"></p>
+                    <p>Deaths</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_kd"></p>
+                    <p>K/D</p>
+                </div>
+                <div class="mode_numbers">
+                    <p class="stat_value" id="squad_kpm"></p>
+                    <p>KPM</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </footer>
+</body>
+
+</html>
